@@ -1,0 +1,44 @@
+.main4services {
+  background-color: white;
+
+  /* width: 100%; */
+}
+.services{
+  color: var(--color4);
+}
+.inner4services{
+  width: 100%;
+  border: 2px solid var(--color4);
+  background-color: transparent;
+  margin-top: 20px;
+  height: 220px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s ease;
+  box-shadow: rgba(0, 117, 255, 0.5) 0px 2px 4px 0px, rgba(0, 117, 255, 0.5) 0px 2px 16px 0px;
+}
+
+
+.img4services{
+  width: 80px;
+  
+}
+.inner4services a{
+  text-decoration: none;
+  color: var(--color4);
+  font-weight: 600;
+  font-size: 20px;
+}
+.inner4services h5{
+  color: var(--color4);
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.h3inner{
+  color: var(--color4);
+}
+

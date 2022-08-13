@@ -1,0 +1,45 @@
+.main_for_login{
+    background-color: var(--color4);
+    width: 600px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.inner_for_login{
+    display: flex;
+    justify-content: center;align-items: center;
+    flex-direction: column;
+}
+.childs_for_login input{
+    padding-left: 5px;
+    width: 300px;
+    margin-top: 10px;
+    height: 40px;
+    outline: none;
+    text-shadow: none;
+    border: none;
+}
+.hrforlogin{
+    width: 100px;
+    height:1px;
+    background-color: black;
+    opacity: 1;
+}
+.hr_for_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text{
+    margin: 0px 5px;
+}
+
+.childs_for_login input:hover{
+    outline: none;
+    border: none;
+    text-shadow: none;
+}

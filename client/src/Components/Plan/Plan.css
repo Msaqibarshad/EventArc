@@ -1,0 +1,82 @@
+.mian4plan{
+    background-color: var(--color4);
+   
+}
+.text4paln{
+    color: white;
+}
+.carddiv{
+    margin: auto;
+    background-color: white;
+    /* background-color: transparent;/ */
+    width: 80%;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.5s ease;
+}
+.carddiv2{
+    border-radius: 5px;
+
+    margin: auto;
+    background-color: transparent;
+    border: 2px solid white;
+    /* background-color: transparent;/ */
+    width: 90%;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.5s ease;
+}
+
+
+.carddiv a,.carddiv2 a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+.carddiv2 a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+.uppertext4card{
+    font-size: 20px;
+    
+}
+
+.carddiv:hover{
+    background-color: var(--color4);
+    border: 2px solid white;
+    color: white;
+}
+.carddiv:hover a{
+    color: white;
+}
+.carddiv2:hover{
+    background-color: white;
+    color: black;
+}
+.carddiv2:hover a{
+    color: black;
+}
+
+
+@media (max-width:440px) {
+    .carddiv,.carddiv2{
+        margin-top: 20px;
+    }
+    
+}
+

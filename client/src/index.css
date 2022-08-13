@@ -1,0 +1,52 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@300;400&family=Lato:wght@100;300&family=Poppins:wght@100;200;300;400&family=Raleway:wght@100&family=Roboto+Flex:opsz,wght@8..144,100&family=Roboto:ital,wght@0,100;0,300;1,100;1,900&display=swap");
+* {
+  font-family: "Roboto Flex", sans-serif;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+.modal-backdrop {
+  /* background-color: transparent;/ */
+  display: none;
+}
+:root {
+  --color1: #cc9902;
+  --color2: #7ebc12;
+  --color3: #26b16d;
+  --color4: #0075ff;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.fortopforallcom {
+  position: absolute;
+  top: 140px;
+}
+@media (max-width: 1000px) {
+  .fortopforallcom {
+    position: absolute;
+    top: 70px;
+  }
+}
+@media (max-width: 700px) {
+  .fortopforallcom {
+    position: absolute;
+    top: 270px;
+  }
+}
+
+.active a{
+  color: var(--color4);
+}

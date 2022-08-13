@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Square+Peg&display=swap');
+
+.main4contact{
+    background-color: var(--color4);
+    /* font-weight: 600; */
+    
+}
+
+.btn4contact{
+    outline: none;
+    box-shadow: none;
+    color: white;
+    border: none;
+    background-color: transparent;
+    display: flex;justify-content: center;
+    align-items: center;
+    /* flex-direction: ; */
+}
+.rightdiv4contact{
+    border-left: 2px solid white;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: start; */
+    align-items: flex-start;
+}
+.input4contact{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white !important;
+    margin-right: 20px;
+    color: white !important;
+    width: 200px;
+    /* font-weight: 600; */
+    height: 50px;
+}
+.input4contact::placeholder{
+    color: white;
+
+}
+.email4contact::placeholder{
+    color: white;
+
+}
+.mess4contact::placeholder{
+    color: white;
+}
+.innerchild4contact{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.leftdiv4contact{
+    display: flex;
+    flex-direction: column;
+    /* font-weight: 600; */
+}
+.email4contact{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white !important;
+    /* margin-right: 10px; */
+    width: 420px;
+    /* font-weight: 600; */
+    height: 50px;
+    color: white;
+}
+.mess4contact{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white !important;
+    /* margin-right: 10px; */
+    width: 420px;
+    /* font-weight: 600; */
+    height: 100px;
+    color: white;
+
+}
+.btn4contactleft{
+    width: 150px;
+    height: 40px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    /* font-weight: 600; */
+}
+.heading4contact{
+    color: white;
+}
+.innermodal{
+    width: 1000px !important;
+    height: 90vh !important;
+    position: relative;
+    left: -280px;
+}
+.innerdialog{
+    width: 100% !important;
+    
+}
+.maintext4contact{
+
+text-align: center;   
+ color: white;
+margin-bottom: 20px;
+}
+.para4contact{
+    text-align: justify;
+    color: white;
+}
+.btns_for_contact{
+    display: flex;
+}
+.btns_for_contact button:nth-child(2){
+    margin-left: 5px;
+}

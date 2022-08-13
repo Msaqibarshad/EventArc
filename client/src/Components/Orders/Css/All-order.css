@@ -1,0 +1,367 @@
+
+
+/* all order css start  */
+input:focus { 
+    outline: none !important;
+    border: 1px solid var(--color4);
+    /* border-color: #719ECE; */
+    box-shadow: none;
+    outline: none;
+    border-radius: none;
+}
+.h1-4-allorders{
+    color: var(--color4);
+    font-size: 35px;
+}
+.orbtn{
+    width: 1010px ;
+    color: var(--color4);
+    background-color: transparent;
+    border: 1px solid var(--color4);
+    height: 70px;
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
+}
+.orbtn a{
+    text-decoration: none;
+    font-size: 25px;
+
+}
+@media (max-width:1024px) {
+    .orbtn{
+        width: 630px;
+    }
+    
+}
+@media (max-width:425px) {
+    .orbtn{
+        width: 320px;
+    }
+    
+}
+@media (max-width:375px) {
+    .orbtn{
+        width: 270px;
+    }
+    
+}
+@media (max-width:320px) {
+    .orbtn{
+        width: 240px;
+    }
+    
+}
+.main-4-all-orders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.orderbtns{
+
+    color: var(--color4);
+    background-color: transparent;
+    border: 1px solid var(--color4);
+    height: 70px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
+
+}
+.orderbtns a{
+    text-decoration: none;
+    font-size: 25px;
+
+}
+.orbtn:hover{
+    background-color: var(--color4);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.orbtn:hover a{
+    color: white;
+}
+.allcolsforcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    margin-bottom: 20px;
+}
+.orderbtns:hover{
+    background-color: var(--color4);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.orderbtns:hover a{
+    color: white;
+}
+.customimg{
+    width: 45px;
+    margin-left: 20px;
+}
+
+@media (max-width:768px) {
+    .sibling-parent-4-birthday,.inner-second-child-4-birthday{
+        flex-direction: column;
+        margin-right: 22px;
+
+    }
+    .inner-second-sibling-4-birthday input,.in{
+        width: 350px !important;
+        /* margin-right: 20px; */
+    }
+    
+}
+@media (max-width:320px) {
+    .sibling-4-birthday input{
+       
+        width: 300px !important;
+        margin-right: -10px;
+        /* margin: auto; */
+/* margin-left: 25px; */
+    }
+    .inner-second-sibling-4-birthday input,.in{
+        width: 300px !important;
+        margin-right: -10px;
+
+        /* margin-right: 20px; */
+    }
+    
+}
+/* all order css end  */
+
+
+/* customization css start  */
+
+.main-4-customization{
+    display: flex;
+    justify-content: center;align-items: center;
+    flex-direction: column;
+}
+.back4custom{
+    text-decoration: none !important;
+
+}
+.child-div-4-customization{
+    width: 450px;
+    height: 80px;
+    border: 1px solid var(--color4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: var(--color4);
+    transition: all 1s ease;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.para-4-customization{
+    font-size: 30px;
+    color: var(--color4);
+    text-align: center;
+    margin: 20px 0px;
+
+}
+
+.img-4-own{
+    width: 70px;
+    margin-left: 20px;
+}
+.child-div-4-customization:hover{
+    background-color: var(--color4);
+    color: white;
+}
+
+/* customization css end  */
+
+/* birthday css start  */
+
+.inner-div-4-birtday{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-para-4-birthday{
+    color: var(--color4);
+    font-size: 30px !important;
+}
+.inner-div-4-birtday p{
+    color: var(--color4);
+    font-size: 25px;
+}
+.sibling-parent-4-birthday{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sibling-4-birthday input{
+    width: 350px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color4);
+    text-align: center;
+    /* color: black; */
+}
+.btns-4-birtday{
+    background-color: var(--color4);
+    color: white;
+    width: 350px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    /* border: 1px solid var(--color4); */
+    text-align: center;
+}
+.second-inner-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inner-second-child-4-birthday{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+
+}
+.inner-second-sibling-4-birthday{
+    display: flex;
+}
+
+.inner-second-sibling-4-birthday input{
+    width: 230px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid var(--color4);
+
+}
+.second-btns-4-birth{
+    width: 230px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: var(--color4);
+    /* border: 1px solid var(--color4); */
+}
+/* birthday css end  */
+
+/* Meeting css start  */
+.in{
+    margin-left: 20px;
+margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 50px;
+    border: 1px solid var(--color4);
+}
+.in label{
+    color: black;
+    cursor: pointer;
+
+}
+
+.radio_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #cecece; */
+    /* width: 180px; */
+    /* height: 50px; */
+    /* border-radius: 9999px; */
+   
+}
+
+input[type="radio"] {
+    appearance: none;
+    display: none;
+}
+
+label {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: center;
+    /* border-radius: 9999px; */
+    overflow: hidden;
+    transition: linear 0.3s;
+    /* color: #6e6e6edd; */
+}
+.label-btn{
+    color: black;
+    height: 40px;
+    margin-left: 3px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 30px;
+    /* background-color: transparent; */
+    /* border: 1px solid var(--color4); */
+}
+
+input[type="radio"]:checked + label {
+    background-color: var(--color4);
+    color: #fff;
+    /* font-weight: 900; */
+    transition: 0.3s;
+}
+
+/* Meeting css end  */
+
+
+/* hybrid css start  */
+.inner-4-hybrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 60px;
+    border: 1px solid var(--color4);
+    color: var(--color4);
+    margin-top: 10px;
+    /* background-color: var(--color4); */
+}
+.inner-4-hybrid label{
+    font-size: 25px;
+}
+
+
+.check{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: var(--color4);
+}
+.btn-for-hybrid{
+    width: 500px;
+    height: 60px;
+    outline: none;
+    box-shadow: none;
+    background: var(--color4);
+    color: #fff;
+    border: none;
+    font-size: 25px;
+}
+/* hybrid css end  */

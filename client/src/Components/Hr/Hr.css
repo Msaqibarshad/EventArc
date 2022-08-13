@@ -1,0 +1,20 @@
+.hr4services {
+  width: 100px;
+  height: 2px;
+  border-radius: 10px;
+  border: none;
+  /* color: black !important; */
+  opacity: 1;
+  background-color: var(--color4);
+}
+.fa-heart {
+  color: var(--color4) ;
+  /* opacity: 0.7; */
+  font-size: 25px;
+  /* font-weight: 600; */
+}
+.forhr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

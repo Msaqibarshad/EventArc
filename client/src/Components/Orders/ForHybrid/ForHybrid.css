@@ -1,0 +1,39 @@
+.main_for_hybrid_childs{
+    background-color: var(--color4);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* padding: 40px 0px; */
+    display: flex;justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.para_for_hybrid_childs div{
+    color: white;
+    font-size: 30px;
+    margin: 10px 0px;
+}
+.personal_info_for_hybrid_childs input,.btns_for_hybrid{
+    /* padding: ; */
+    width: 300px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: center;
+    outline: none;
+    box-sizing: none;
+    border: none;
+    transition: all 1s ease;
+    
+}
+.btns_for_hybrid{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+.btns_for_hybrid:hover{
+    background-color: white;
+    color: black;
+}
+.personal_inputs,.btns_for_hybrid{
+    width: 452px !important;
+}

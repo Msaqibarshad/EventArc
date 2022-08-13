@@ -1,0 +1,18 @@
+.heart4blue {
+    color: white !important;
+    opacity: 1 !important;
+  }
+  .forhrcustom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  .hr4custom {
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    opacity: 1;
+    border: none;
+
+  }

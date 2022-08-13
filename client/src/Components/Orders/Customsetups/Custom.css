@@ -1,0 +1,40 @@
+.main_for_custom_birthday{
+    background-image: url(./Images/back.png);
+    background-size: cover;
+width: 800px;
+    height: 80vh;
+}
+.lower_btns_for_custom_birthday{
+    height: 120px;
+    border: 2px solid var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link_for_img{
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100px;
+    height: 80px;
+    border: 1px solid black;
+}
+
+.tabel_img{
+    position: absolute;
+    top: 380px;
+    width: 100px;
+    left: 380px;
+    display: none;
+
+}
+.Curtain{
+    width: 550px;
+    position: absolute;
+    top: 170px;
+    left: 170px;
+    display: none;
+}

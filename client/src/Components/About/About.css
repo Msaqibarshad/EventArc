@@ -1,0 +1,127 @@
+/* #536683
+#fdc125
+#fc6862
+#97bb48 */
+.miantext4about{
+    color: white;
+}
+.para4about{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+.innerdiv4about1{
+    width: 150px;
+    height: 150px;
+    background-color: #97bb48;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: rotate(225deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+}
+.innerdiv4about2{
+    width: 150px;
+    height: 150px;
+    background-color: #fdc125;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: rotate(225deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.innerdiv4about3{
+    width: 150px;
+    height: 150px;
+    background-color: #fc6862;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: rotate(225deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.df4about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main4about{
+    background-color: var(--color4);
+
+}
+.innerchild4about{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-size: cover; */
+    transform: rotate(138deg);
+}
+.innerchild4about img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+ .innerdiv4about1:hover img {
+width: 100px;
+height: 100px;
+}
+.innerdiv4about2:hover img {
+    width: 100px;
+    height: 100px;
+}
+.innerdiv4about3:hover img {
+    width: 100px;
+    height: 100px;
+}
+.direction4about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border-bottom: 2px solid blacks; */
+}
+.social4about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconsocial4about{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;align-items: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: all 1s ease;
+
+}
+.iconsocial4about:hover{
+    /* opacity: 0.7; */
+    background-color: black;
+    color: white ;
+    
+}
+.title4about{
+    color: white;
+    font-weight: 600;
+}

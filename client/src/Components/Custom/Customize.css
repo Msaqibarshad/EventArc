@@ -1,0 +1,14 @@
+.main4custom {
+  background-color: var(--color4);
+  color: white;
+  /* text-align: center; */
+}
+
+.justi {
+  text-align: justify;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+}
+.lineh {
+  line-height: 50px;
+}
