@@ -19,11 +19,9 @@ import Two_Three from "./Components/Orders/ForHybrid/Two_Three";
 import All from "./Components/Orders/ForHybrid/All";
 import SignIn from "./Components/User/SignIn/SignIn";
 import SignUp from "./Components/User/SignUp/SignUp";
-
 import BirthdayCustom from "./Components/Orders/Customsetups/BirthdayCustom";
-
+import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 // import Parent from "./Components/LearnProps/Parent";
-
 function App() {
   return (
     <>
@@ -45,25 +43,20 @@ function App() {
             <Customized />
           </Route>
           <Route exact path="/birthdaycustomize">
-            <BirthdayCustom/>
+            <BirthdayCustom />
           </Route>
-
           <Route exact path="/customize">
             <Customized />
           </Route>
-
           <Route exact path="/customize">
             <Customized />
           </Route>
           <Route exact path="/birthday">
             <Birthday />
           </Route>
-
           <Route exact path="/hybrid">
-             <Hybrid />
+            <Hybrid />
           </Route>
-          
-
           <Route exact path="/meeting">
             <Meeting />
           </Route>
@@ -95,15 +88,17 @@ function App() {
             <All />
           </Route>
           <Route exact path="/signin">
-            <SignIn/>
+            <SignIn />
           </Route>
           <Route exact path="/signup">
-            <SignUp/>
+            <SignUp />
+          </Route>
+          <Route exact path="/Admin">
+            <AdminDashboard/>
           </Route>
         </Switch>
       </Router>
     </>
   );
 }
-
 export default App;

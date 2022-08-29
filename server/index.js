@@ -1,8 +1,5 @@
-
-
 const dotenv = require('dotenv');
 const connection = require('./database/db.js');
-
 const express = require('express')
 const app = express();
 dotenv.config();
@@ -23,14 +20,12 @@ const Contact = require("./modals/contactModal")
 const cors = require("cors");
 app.use(cors());
 app.use(express.json())
-// app.get('/', (req, res) => res.send('Hello World!'));
 const { body, validationResult } = require('express-validator');
-
 app.post('/api/birthday', [
   body('email', 'please enter a valid email address ').isEmail(),
 
 ], async (req, res) => {
-  console.log(req.body); 
+  console.log(req.body);
   const { name,
     number,
     email,
@@ -347,7 +342,7 @@ app.post('/api/hybrid_first',
       personname: personname,
       personemail: personemail,
       personaddress: personaddress,
-      
+
       personphone: personphone,
       date:date,
     time:time,

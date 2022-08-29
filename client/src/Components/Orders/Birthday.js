@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Css/All-order.css";
 import Hr from "../Hr/Hr";
-
 const Birthday = () => {
-
   const [name, setname] = useState("");
   const [number, setnumber] = useState("");
   const [email, setemail] = useState("");
@@ -12,7 +10,6 @@ const Birthday = () => {
   const [persons, setpersons] = useState("");
   const [date, setdate] = useState("");
   const [time, settime] = useState("");
-
   const [firework, setfirework] = useState("");
   const [decoration, setdecoration] = useState("");
   const [dj, setdj] = useState("");
@@ -66,18 +63,15 @@ const Birthday = () => {
           } else {
             alert(res.success);
             clear();
-
           }
         })
         .catch((err) => {
           console.log({ err });
           alert("Error while get data from API", err);
         });
-
       // alert("done");
     }
   };
-
   const clear = () => {
     setname("");
     setnumber("");
@@ -91,7 +85,6 @@ const Birthday = () => {
     setdj("");
     setbuffet("");
     setm_pic("");
-
     // document.getElementById('one6').style.background= "white";
     // document.getElementById('one6').style.color= "white";
     // document.getElementById('two6').style.background= "white";
@@ -107,7 +100,6 @@ const Birthday = () => {
     var ele = document.getElementsByName("radio10");
     for (var i = 0; i < ele.length; i++) ele[i].checked = false;
   };
-
   return (
     <div className="container">
       <form method="post">
@@ -123,7 +115,7 @@ const Birthday = () => {
                 <input
                   type="text"
                   value={name}
-                  placeholder="Enter 
+                  placeholder="Enter
 Your Full Name...."
                   onChange={(e) => {
                     setname(e.target.value);
@@ -146,7 +138,7 @@ Your Full Name...."
                 <input
                   type="email"
                   value={email}
-                  placeholder="Enter 
+                  placeholder="Enter
 Your Email Address...."
                   onChange={(e) => {
                     setemail(e.target.value);
@@ -163,16 +155,12 @@ Your Email Address...."
                   }}
                 />
               </div>
-              
             </div>
             <div className="sibling-parent-4-birthday">
               <div className="sibling-4-birthday">
                 <input
-                
-                
                   type="date"
                   value={date}
-                  
                   onChange={(e) => {
                     setdate(e.target.value);
                   }}
@@ -182,18 +170,15 @@ Your Email Address...."
                 <input
                   type="time"
                   value={time}
-                  
                   onChange={(e) => {
                     settime(e.target.value);
                   }}
                 />
               </div>
-              
             </div>
           </div>
           <div className="second-inner-child">
             <p>Enter Your Setup Details</p>
-
             <div className="inner-second-child-4-birthday">
               <div className="inner-second-sibling-4-birthday">
                 <input
@@ -364,21 +349,7 @@ Your Email Address...."
                 </div>
               </div>
             </div>
-            {/* <div className="inner-second-child-4-birthday">
-            <div className="inner-second-sibling-4-birthday">
 
-              <input type="text" value="10 Person Plan" />
-
-            </div>
-            <div className="inner-second-sibling-4-birthday">
-              <input type="text" value="Parking Availability Yes" />
-              
-            </div>
-            <div className="inner-second-sibling-4-birthday">
-              <input type="text" placeholder='Enter Names of Decoration' />
-              
-            </div>
-          </div> */}
             <div className="inner-second-child-4-birthday">
               <div className="inner-second-sibling-4-birthday">
                 <NavLink exact to="/allsetups">
@@ -402,10 +373,9 @@ Your Email Address...."
                   className="second-btns-4-birth"
                   type="button"
                   value="Submit"
-                  onClick={ 
-                    () =>{
+                  onClick={
+                    () => {
                       handleClick();
-                      
                     }
                   }
                 />
@@ -417,5 +387,4 @@ Your Email Address...."
     </div>
   );
 };
-
 export default Birthday;

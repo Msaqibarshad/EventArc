@@ -110,3 +110,21 @@ padding: 20px 0px;
     height: 335px;
   }
 } */
+@media (max-width:1024px) {
+  .orderbtn4header{
+    width: 80px !important;
+    font-size: 15px;
+  }}
+
+@media (max-width:768px) {
+  .orderbtn4header{
+    margin-top: 10px;
+    width:150px !important;
+    font-size: 18px;
+  }
+  navbar-toggler{
+    margin-right: 20px;
+  }
+
+}
+

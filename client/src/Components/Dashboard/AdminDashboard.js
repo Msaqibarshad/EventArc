@@ -2,7 +2,7 @@ import React from 'react';
 import './Dashboard.css';
 import { NavLink } from 'react-router-dom';
 
-const Dashboard = () => {
+const AdminDashboard = () => {
     const expand1 = () =>{
         document.getElementById("leftside").style.width="10%";
         document.getElementById("forright").style.width="90%";
@@ -24,7 +24,6 @@ const Dashboard = () => {
         document.getElementById("icon2").style.paddingLeft="0px";
         document.getElementById("icon3").style.paddingLeft="0px";
     }
-
   return (
     <div>
         <div className="top_navbar_for_user_dashboard">
@@ -39,17 +38,10 @@ const Dashboard = () => {
                 <i id='icon1' class="far fa-calendar-check mx-3"></i>
                 <div className='text_for_left_sidebar' id='left_text1'>
 
-                My Orders
+                All Orders
                 </div>
                 </div>
-                <div className="inner_for_left_sidebar">
-                <i id='icon2' class="fas fa-sign-out-alt mx-3"></i>
 
-                <div className='text_for_left_sidebar' id='left_text2'>
-
-                Sign Out
-                </div>
-                </div>
 
                 <NavLink exact to="/">
 
@@ -80,15 +72,7 @@ const Dashboard = () => {
                         <i class="fas fa-eye mx-1"></i>
                             View Order
                         </div>
-                        <div className="child_inner_function">
-                        <i class=" mx-2 fas fa-trash"></i>
-                            Delete
-                        </div>
 
-                        <div className="child_inner_function">
-                        <i class=" mx-2 fas fa-edit"></i>
-                            Edit
-                        </div>
                     </div>
                 </div>
 
@@ -101,4 +85,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default AdminDashboard
