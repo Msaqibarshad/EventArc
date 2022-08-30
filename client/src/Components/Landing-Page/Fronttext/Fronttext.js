@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Fronttext.css";
-import eve from "../images/eve.png";
+import eve from "../images/imgmain.png";
 // import {Helmet} from "react-helmet";
 
 
@@ -61,11 +61,11 @@ const Fronttext = () => {
               <h1 className="head4front">
                 EVENT<span>ARC</span>
               </h1>
-              
+
 
               <p class="typewriter">
               Is a web app which helps you to create, decorate, manage and
-                customize your evetns at your own and in this 
+                customize your evetns at your own and in this
                 we provide you our best services like
                 <br />
                 <span data-text="birthday events., wedding events., meetings., party setups., pool parties., photoshoot setups., and customized setups."></span>
@@ -75,20 +75,20 @@ const Fronttext = () => {
               <img className="img-fluid " src={eve} alt="" />
             </div>
           </div>
-          
 
-          
+
+
           <a  href="#up">
           <button className="moveup">
         <i class="fas fa-arrow-up"></i>
         </button></a>
-        
+
         </div>
-        
+
 
       </div>
-      
-  
+
+
     </>
   );
 };

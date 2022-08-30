@@ -1,19 +1,28 @@
 import React, { useEffect } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import logo from './Images/logofornavbar.png'
+import logo from "./Images/logofornavbar.png";
+import { useState } from "react";
 
 const Header = () => {
+  const [buttons, setButtons] = useState(false);
   useEffect(() => {
-    window.addEventListener("scroll", function () {
-      const header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 0);
-    });
+    var auth = localStorage.getItem("auth-token");
+    if (auth !== null) {
+      setButtons(true);
+    } else {
+      setButtons(false);
+    }
   }, []);
+
+  const authtokenremove = () =>{
+    localStorage.removeItem("auth-token");
+    setButtons(false);
+
+  }
 
   return (
     <>
-
       <nav class="navbar  navbar-expand-lg nav4color " id="up">
         <div class="container-fluid ">
           <a class="navbar-brand" href="#">
@@ -70,40 +79,32 @@ const Header = () => {
               </li>
               <li class="nav-item">
                 <NavLink exact to="/dashboard">
-
-                <a class="nav-link " aria-current="page" href="#">
-                  MY DASHBOARD
-                </a>
-                </NavLink>
-              </li>
-              <li class="nav-item orderbtn4header">
-
-              <NavLink exact to="/signin">
-
-                  <a class="nav-link " >
-                    SIGN IN
-                  </a>
-              </NavLink>
-
-              </li>
-              <li class="nav-item orderbtn4header mx-1">
-
-              <NavLink exact to="/signup">
-
-                  <a class="nav-link " >
-                    SIGN UP
-                  </a>
-</NavLink>
-              </li>
-
-
-              <li class="nav-item orderbtn4header">
-                <NavLink exact to="/allsetups">
                   <a class="nav-link " aria-current="page" href="#">
-                    ORDER TO US
+                    MY DASHBOARD
                   </a>
                 </NavLink>
               </li>
+              {buttons ? (
+                <>
+                  <li  class="nav-item orderbtn4header mx-1">
+                    <a onClick={authtokenremove} class="nav-link ">SIGN OUT</a>
+                  </li>
+
+                  <li class="nav-item orderbtn4header">
+                    <NavLink exact to="/allsetups">
+                      <a class="nav-link " aria-current="page" href="#">
+                        ORDER TO US
+                      </a>
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <li class="nav-item orderbtn4header ">
+                  <NavLink exact to="/signin">
+                    <a class="nav-link ">SIGN IN</a>
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </div>
         </div>
