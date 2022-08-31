@@ -49,6 +49,8 @@ const Photo = () => {
         number,
         email,
         address,
+        date,
+        time,
         persons,
         water,
         clicks,
@@ -121,7 +123,7 @@ const Photo = () => {
             <div className="sibling-4-birthday">
               <input
                 type="text"
-                placeholder="Enter 
+                placeholder="Enter
 Your Full Name...."
                 value={name}
                 onChange={(e) => {
@@ -144,7 +146,7 @@ Your Full Name...."
             <div className="sibling-4-birthday">
               <input
                 type="email"
-                placeholder="Enter 
+                placeholder="Enter
 Your Email Address...."
                 value={email}
                 onChange={(e) => {
@@ -166,11 +168,11 @@ Your Email Address...."
           <div className="sibling-parent-4-birthday">
               <div className="sibling-4-birthday">
                 <input
-                
-                
+
+
                   type="date"
                   value={date}
-                  
+
                   onChange={(e) => {
                     setdate(e.target.value);
                   }}
@@ -180,13 +182,13 @@ Your Email Address...."
                 <input
                   type="time"
                   value={time}
-                  
+
                   onChange={(e) => {
                     settime(e.target.value);
                   }}
                 />
               </div>
-              
+
             </div>
         </div>
         <div className="second-inner-child">

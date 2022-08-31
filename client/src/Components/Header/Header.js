@@ -77,15 +77,16 @@ const Header = () => {
                   </a>
                 </NavLink>
               </li>
-              <li class="nav-item">
+
+              {buttons ? (
+                <>
+                <li class="nav-item">
                 <NavLink exact to="/dashboard">
                   <a class="nav-link " aria-current="page" href="#">
                     MY DASHBOARD
                   </a>
                 </NavLink>
               </li>
-              {buttons ? (
-                <>
                   <li  class="nav-item orderbtn4header mx-1">
                     <a onClick={authtokenremove} class="nav-link ">SIGN OUT</a>
                   </li>

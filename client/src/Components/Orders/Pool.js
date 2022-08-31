@@ -43,6 +43,8 @@ const Pool = () => {
         number,
         email,
         address,
+        date,
+        time,
         persons,
         parking,
         refreshment,
@@ -50,6 +52,7 @@ const Pool = () => {
         swimaccessories,
         snack_cool,
       };
+      console.log({check: data});
       fetch("/api/pool", {
         method: "POST",
         headers: {
@@ -107,7 +110,7 @@ const Pool = () => {
             <div className="sibling-4-birthday">
               <input
                 type="text"
-                placeholder="Enter 
+                placeholder="Enter
 Your Full Name...."
                 value={name}
                 onChange={(e) => {
@@ -130,7 +133,7 @@ Your Full Name...."
             <div className="sibling-4-birthday">
               <input
                 type="email"
-                placeholder="Enter 
+                placeholder="Enter
 Your Email Address...."
                 value={email}
                 onChange={(e) => {
@@ -152,11 +155,11 @@ Your Email Address...."
           <div className="sibling-parent-4-birthday">
               <div className="sibling-4-birthday">
                 <input
-                
-                
+
+
                   type="date"
                   value={date}
-                  
+
                   onChange={(e) => {
                     setdate(e.target.value);
                   }}
@@ -166,13 +169,13 @@ Your Email Address...."
                 <input
                   type="time"
                   value={time}
-                  
+
                   onChange={(e) => {
                     settime(e.target.value);
                   }}
                 />
               </div>
-              
+
             </div>
         </div>
         <div className="second-inner-child">
@@ -328,11 +331,11 @@ Your Email Address...."
             </div>
             <div className="inner-second-sibling-4-birthday">
               <input type="text" value="Parking Availability Yes" />
-              
+
             </div>
             <div className="inner-second-sibling-4-birthday">
               <input type="text" placeholder='Enter Names of Decoration' />
-              
+
             </div>
           </div> */}
           <div className="inner-second-child-4-birthday">

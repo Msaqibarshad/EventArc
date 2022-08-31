@@ -621,16 +621,126 @@ app.post(
 
   }
 );
-
+//  api birthday for dashboard
 app.post('/api/dashboardbirthday' , async (req, res) => {
   try {
-      const birthdaydetails = await Birthday.find({ email: req.body.useremailfordashbaord });
-      res.json(birthdaydetails)
+      const details = await Birthday.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
   } catch (error) {
       console.error(error.message);
       res.status(500).send("Internal Server Error");
   }
 })
+//  api poo for dashboard
+
+app.post('/api/dashboardpool' , async (req, res) => {
+  try {
+      const details = await Pool.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+//  api party for dashboard
+
+
+app.post('/api/dashboardparty' , async (req, res) => {
+  try {
+      const details = await Party.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+//  api meeting for dashboard
+
+app.post('/api/dashboardmeeting' , async (req, res) => {
+  try {
+      const details = await Meeting.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+//  api wedding for dashboard
+
+app.post('/api/dashboardweeding' , async (req, res) => {
+  try {
+      const details = await Wedding.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+//  api photo for dashboard
+
+
+app.post('/api/dashboardphoto' , async (req, res) => {
+  try {
+      const details = await Photo.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+//  api Birthday+Pool for dashboard
+
+app.post('/api/dashboardBirthdayPool' , async (req, res) => {
+  try {
+      const details = await HybridFirst.find({ personemail: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+//  api Birthday+Photo for dashboard
+
+app.post('/api/dashboardBirthdayPhoto' , async (req, res) => {
+  try {
+      const details = await HybridSecond.find({ personemail: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+//  api Pool+Photo for dashboard
+
+app.post('/api/dashboardPoolPhoto' , async (req, res) => {
+  try {
+      const details = await HybridThird.find({ personemail: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+//  api Birth+ Pool+Photo for dashboard
+
+app.post('/api/dashboardBirthdayPoolPhoto' , async (req, res) => {
+  try {
+      const details = await HybridFourth.find({ personemail: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+
+
+
 
 
 
