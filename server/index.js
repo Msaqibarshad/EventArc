@@ -738,8 +738,67 @@ app.post('/api/dashboardBirthdayPoolPhoto' , async (req, res) => {
   }
 })
 
+//admin dashobaord api calling
 
+app.post('/api/admindashboardbirthday' , async (req, res) => {
+  try {
+      const details = await Birthday.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
 
+app.post('/api/admindashboardpool' , async (req, res) => {
+  try {
+      const details = await Pool.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardwedding' , async (req, res) => {
+  try {
+      const details = await Wedding.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardphoto' , async (req, res) => {
+  try {
+      const details = await Photo.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardparty' , async (req, res) => {
+  try {
+      const details = await Party.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardmeeting' , async (req, res) => {
+  try {
+      const details = await Meeting.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
 
 
 

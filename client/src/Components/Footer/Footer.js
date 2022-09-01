@@ -97,7 +97,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='footercopy my-3'>
-                        <p>COPYRIGHT CLAIMS</p>
+                        <p><i class="far fa-copyright"></i> 2022 EVENTARC All rights reserved.</p>
                     </div>
                 </div>
             </div>

@@ -35,6 +35,7 @@ const SignIn = () => {
 
             console.log(res);
             localStorage.setItem("auth-token", res.authtoken);
+            localStorage.setItem("useremail" , signinuseremail);
           }
         })
         .catch((err) => {

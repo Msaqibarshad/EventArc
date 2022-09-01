@@ -10,8 +10,8 @@ const Faq = () => {
             <div className="my-2">
             <Hr/>
             </div>
-            
-        
+
+
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -21,7 +21,7 @@ const Faq = () => {
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <p>EVENTARC is WEBAPP platform where you can easily get the setups of parties, weddings, meetings, photoshoots and many more.</p>
+        <p>Being The Best Event Management Company We Strive To Create High Quality And Out Of The Box Prodcutions For Our Clients. Check Out Our User Friendly Customizable 3d Modals And See For Yourself What Makes Us Stand Out. Supervise Every Detail Of Your Event From The Comfort Of Your Home.</p>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ const Faq = () => {
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        We recomment it to you because in it you can easily decorate your setups with 3D icon models.
+        EventArc is a Dynamic event organizing WebApp which allows you to completely customize your events From the comfort of your home.
       </div>
     </div>
   </div>
@@ -47,13 +47,13 @@ const Faq = () => {
       <div class="accordion-body">
         We use different methods to get payments, these are as follows:
         <br />
-        1. MEZZAN BANK ACCOUNT
+        1. Cash on delivery.
         <br />
-        2. EASYPAISA ACCOUNT
+        2. Easypaisa.
         <br />
-3. JAZZCASH ACCOUNT 
+3. Jazzcash
 <br />
-4. NAYAPAY ACCOUNT 
+4. Nayapay
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@ const Faq = () => {
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        The main features of EventArc are Customization and Hybernization feature which allows the user to customize their event with the help of 2D models.This way the user can completely control the event's environment without actually being there.
       </div>
     </div>
   </div>
@@ -77,12 +77,12 @@ const Faq = () => {
     </h2>
     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        33B link 2, Super town, Lahore, Punjab.
       </div>
     </div>
   </div>
 
-  
+
 
 </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "./Css/All-order.css";
 import Hr from "../Hr/Hr";
 const Birthday = () => {
@@ -15,6 +15,8 @@ const Birthday = () => {
   const [dj, setdj] = useState("");
   const [buffet, setbuffet] = useState("");
   const [m_pic, setm_pic] = useState("");
+  const history = useHistory();
+
   const handleClick = () => {
     if (
       name === "" ||
@@ -63,6 +65,7 @@ const Birthday = () => {
           } else {
             alert(res.success);
             clear();
+            history.push("/dashboard");
           }
         })
         .catch((err) => {

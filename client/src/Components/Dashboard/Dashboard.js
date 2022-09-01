@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { NavLink } from "react-router-dom";
-
+var emailofuser = "";
 const Dashboard = () => {
   var nameofuser = localStorage.getItem("name");
   var nameofuser1 = localStorage.getItem("name1");
@@ -18,6 +18,8 @@ const Dashboard = () => {
   const [birthdayPoolPhotoArray, setbirthdayPoolPhotoArray] = useState([]);
   useEffect(() => {
     var useremailfordashbaord = localStorage.getItem("useremail");
+     emailofuser = useremailfordashbaord.split("@")[0];
+    console.log({emailofuser});
     console.log(useremailfordashbaord);
 
     const data = {
@@ -264,7 +266,7 @@ const Dashboard = () => {
     <div>
       <div className="top_navbar_for_user_dashboard">
         <div className="first_child">EVENTARC</div>
-        <div className="first_child">{nameofuser + " " + nameofuser1}</div>
+        <div className="first_child">{emailofuser}</div>
       </div>
 
       <div className="lower_div_for_dashboard">
