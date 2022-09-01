@@ -2,7 +2,8 @@ import React from "react";
 import Hr2 from "../Hr2/Hr2";
 // import Hr from "../Hr/Hr";
 import "./Customize.css";
-import custom from "./Images/customi.svg";
+// import custom from "./Images/customi.svg";
+import custom from "./Images/cust.jpg"
 
 const Customize = () => {
   return (
@@ -30,7 +31,7 @@ const Customize = () => {
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
-              <img className="img-fluid" src={custom} alt="" />
+              <img className="img-fluid custom_img" src={custom} alt="" />
             </div>
           </div>
         </div>

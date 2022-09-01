@@ -99,8 +99,13 @@ list-style: none;
 
 }
 .footercopy{
-    color: var(--color4);
-    font-weight: 600;
+    color: white;
+    background-color: var(--color4);
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 @media (max-width:425px) {
     .input4news{
@@ -119,5 +124,5 @@ width: 90px;
     .footersocial{
         margin-top: 10px;
     }
-    
+
 }

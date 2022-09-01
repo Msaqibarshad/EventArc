@@ -18,7 +18,7 @@
 
 }
 .inner_for_signup{
-    
+
     display: flex;
     align-items: center;
     width: 600px;
@@ -80,4 +80,14 @@ letter-spacing: 1px;
 }
 .input_for_signin{
     margin-bottom: 20px;
+}
+
+.seepassword{
+    color: var(--color4);
+    cursor: pointer;
+}
+
+.seepassword1{
+    color: var(--color4);
+    cursor: pointer;
 }

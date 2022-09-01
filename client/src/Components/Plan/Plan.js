@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Hr2 from '../Hr2/Hr2';
 import './Plan.css'
 // import cake from './Images/birthday.png';
@@ -8,7 +9,7 @@ import './Plan.css'
 const Plan = () => {
   return (
     <div>
-        
+
         <div className="mian4plan py-5" id='plan'>
             <h2 className='text-center text4paln'>OUR PLANS</h2>
             <Hr2 />
@@ -16,7 +17,7 @@ const Plan = () => {
              <div className="row ">
                 <div className="col-lg-4 col-md-4 col-sm-12 ">
                 <div className="carddiv">
-            
+
             <div className="uppertext4card">
                 BIRTHDAY PLAN
             </div>
@@ -30,13 +31,16 @@ const Plan = () => {
             <p>5 Zinger Burger</p>
             <p>2 2.15 Ltrs. Cool Drinks </p>
             <p>Decoration</p>
+            <NavLink exact to="/firstinup">
+
             <a href="">Get An Offer <span>&#8594;</span></a>
+            </NavLink>
 
              </div>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-12 ">
                 <div className="carddiv2">
-            
+
             <div className="uppertext4card">
                 PARTY PLAN
             </div>
@@ -51,13 +55,16 @@ const Plan = () => {
             <p>
                 Fully DJ Setup </p>
             <p>Parking Availability</p>
+            <NavLink exact to="/firstinup">
+
             <a href="">Get An Offer <span>&#8594;</span></a>
+            </NavLink>
 
              </div>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-12 ">
                 <div className="carddiv">
-            
+
             <div className="uppertext4card">
                 PHOTOGRAPHY PLAN
             </div>
@@ -71,7 +78,10 @@ const Plan = () => {
             <p>Edited Photos</p>
             <p>Snacks </p>
             <p>Cool Drinks</p>
+            <NavLink exact to="/firstinup">
+
             <a href="">Get An Offer <span>&#8594;</span></a>
+            </NavLink>
 
              </div>
                 </div>

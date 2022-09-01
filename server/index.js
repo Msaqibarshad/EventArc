@@ -800,6 +800,48 @@ app.post('/api/admindashboardmeeting' , async (req, res) => {
   }
 })
 
+// 1
+
+app.post('/api/admindashboardbirthdaypool' , async (req, res) => {
+  try {
+      const details = await HybridFirst.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardbirthdayphoto' , async (req, res) => {
+  try {
+      const details = await HybridSecond.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardpoolphoto' , async (req, res) => {
+  try {
+      const details = await HybridThird.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardbirthdaypoolphoto' , async (req, res) => {
+  try {
+      const details = await HybridFourth.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
 
 
 

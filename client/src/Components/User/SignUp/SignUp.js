@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "../CssForUser.css";
 const SignUp = () => {
-
+    function passwordview() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
 
     const [signupusernamefirst, setsignupusernamefirst] = useState("");
 
@@ -111,8 +118,15 @@ signupuserpassword === ""
                         onChange={(e) => {
                             setsignupuserpassword(e.target.value);
                           }}
-                        type="password" name="" placeholder='Password*' id="" />
+                        type="password" name="" placeholder='Password*' id="myInput" />
+
+
+                          <div className="mt-3 seepassword1" onClick={passwordview}>
+              See Password
+            </div>
                     </div>
+
+
                     <NavLink exact to="/signin">
 
                     <div className="input_for_signin for-btn">

@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import "../CssForUser.css";
 const SignIn = () => {
+
+  function passwordview() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
     const history = useHistory();
   const [signinuseremail, setsigninuseremail] = useState("");
   const [signinuserpassword, setsigninuserpassword] = useState("");
@@ -74,9 +83,19 @@ const SignIn = () => {
               type="password"
               name=""
               placeholder="Password*"
-              id=""
+              id="myInput"
+
             />
+
+
+            <div className="mt-3 seepassword" onClick={passwordview}>
+              See Password
+            </div>
+
+
+
           </div>
+
           <div className="input_for_signin for-btn">
 
 

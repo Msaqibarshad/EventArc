@@ -11,6 +11,7 @@ import photoshoot from "./Images/New Images/photography.png";
 import pool from "./Images/New Images/pool.png";
 import hybrid from "./Images/New Images/hybrid.png"
 import Hr from "../Hr/Hr";
+import { NavLink } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -28,31 +29,41 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={cake} alt="" />
   <h5 className="my-3">BIRTHDAYS</h5>
-  <a className="text-center" href="">Learn More <span>&#8594;</span> </a>
+
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
+
 </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
             <div className="inner4services">
             <img className="img4services" src={photoshoot} alt="" />
   <h5 className="my-3">PHOTOGRAPHY</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
-  
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
+
 </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
             <div className="inner4services">
   <img className="img4services" src={wedding} alt="" />
   <h5 className="my-3">WEDDING SETUP</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
-  
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
+
 </div>
             </div>
             <div className="col-lg-3 col-md-6 col-sm-12">
             <div className="inner4services">
             <img className="img4services" src={meeting} alt="" />
   <h5 className="my-3">METTINGS</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
-  
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
+
 </div>
             </div></div>
             <div className="row">
@@ -60,7 +71,9 @@ const Services = () => {
             <div className="inner4services">
             <img className="img4services" src={pool} alt="" />
 <h5 className="my-3">POOL PARTIES</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
 
 </div>
 </div>
@@ -68,7 +81,9 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={party} alt="" />
 <h5 className="my-3">PARTIES</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
 
 </div>
 </div>
@@ -76,7 +91,9 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={hybrid} alt="" />
 <h5 className="my-3">HYBRID SETUP</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
 
 </div>
 </div>
@@ -84,16 +101,18 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={custom} alt="" />
 <h5 className="my-3">CUSTOMIZED SETUP</h5>
-  <a href="">Learn More <span>&#8594;</span></a>
+  <NavLink exact to="/firstinup">
+  <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
+  </NavLink>
 
 </div>
 </div>
             </div>
-            
-          
 
-          
-          
+
+
+
+
         </div>
       </div>
     </div>

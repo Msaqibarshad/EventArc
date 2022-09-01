@@ -1,0 +1,26 @@
+.main_for_first_in_up{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;align-items: center;
+    background-color: var(--color4);
+}
+.inner_for_first_in_up{
+    border-radius: 20px;
+    font-size: 40px;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    font-weight: 600;
+}
+
+.main_for_first_in_up span{
+margin:0px 5px ;
+color: var(--color4);
+cursor: pointer;
+}
