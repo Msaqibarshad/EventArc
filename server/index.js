@@ -18,6 +18,7 @@ const HybridThird = require("./modals/hybridThirdModal");
 const HybridFourth = require("./modals/hybridFourthModal");
 const Contact = require("./modals/contactModal");
 const usersignup = require("./modals/usersignupModal");
+const BeforeCustom = require("./modals/beforeCustom");
 // const usersignin = require("./modals/userdigninModal");
 const cors = require("cors");
 app.use(cors());
@@ -64,6 +65,38 @@ app.post(
       dj: dj,
       buffet: buffet,
       m_pic: m_pic,
+    });
+
+    res.send({ success: "succcessfully enetered" });
+  }
+);
+app.post(
+  "/api/beforecustom",
+  [body("email", "please enter a valid email address ").isEmail()],
+  async (req, res) => {
+    console.log(req.body);
+    const {
+      name,
+      number,
+      email,
+      address,
+      date,
+      time,
+
+    } = req.body;
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    await BeforeCustom.create({
+      name: name,
+      number: number,
+      email: email,
+      address: address,
+      date: date,
+      time: time,
+
     });
 
     res.send({ success: "succcessfully enetered" });

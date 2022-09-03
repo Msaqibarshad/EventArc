@@ -19,11 +19,11 @@ const Customized = () => {
         </p>
         <Hr />
 
-        <NavLink exact to="/birthdaycustomize">
+        <NavLink exact to="/beforecustom">
         <div className="child-div-4-customization mt-3">Birthday
         <img className="img-4-own" src={cake} alt="" /></div>
         </NavLink>
-        
+
 
 
         <div className="child-div-4-customization">Wedding <img className="img-4-own" src={wedd} alt="" /></div>
@@ -34,7 +34,7 @@ const Customized = () => {
         <div className="child-div-4-customization">Back <img className="img-4-own" src={back
         } alt="" /></div>
         </NavLink>
-        
+
       </div>
     </div>
   );
