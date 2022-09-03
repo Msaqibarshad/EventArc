@@ -10,6 +10,8 @@ const AdminDashboard = () => {
   const [photoArray, setphotoArray] = useState([]);
   const [partyArray, setpartyArray] = useState([]);
   const [meetingArray, setmeetingArray] = useState([]);
+  const [customArray, setcustomArray] = useState([]);
+
   const [birthdayPoolArray, setbirthdayPoolArray] = useState([]);
   const [birthPhotoArray, setbirthPhotoArray] = useState([]);
   const [poolPhotoArray, setpoolPhotoArray] = useState([]);
@@ -200,6 +202,31 @@ const AdminDashboard = () => {
         alert("Error while get data from API", err);
       });
 
+// custom setup api call for admin dashboard
+
+fetch("/api/admindashboardcustom", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(data),
+})
+  .then((res) => res.json())
+  .then((res) => {
+    console.log(res);
+    if (res.error) {
+      alert(res.error);
+    } else {
+      console.log(res);
+      setcustomArray(res);
+    }
+  })
+  .catch((err) => {
+    console.log({ err });
+    alert("Error while get data from API", err);
+  });
+
+
     // birthday + pool api calling for main dashboard
     fetch("/api/admindashboardbirthdaypool", {
       method: "POST",
@@ -364,6 +391,14 @@ const AdminDashboard = () => {
               }}
             >
               <div>Meeting </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Custom");
+              }}
+            >
+              <div>Custom </div>
             </div>
             <div
               className="inner_data2"
@@ -927,6 +962,52 @@ const AdminDashboard = () => {
             );
           })}
       </>
+     : event === "Custom" ? <>
+     {customArray.map((elem, index) => {
+            return (
+              <>
+                <div className="for_inner_order_admin">
+                  <div className="first_inner_div_admin_dashboard_Order">
+                    <div className="evnet_name"> {index + 1} Custom Setup</div>
+                  </div>
+
+                  <div className="second_inner_div_admin_dashboard_Order">
+                    <div className="user_upper_details_div">
+                      <div className="user_details">
+                        <label htmlFor="">User Name:</label>
+                        <div className="mx-2">{elem.name}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">User Phone #:</label>
+                        <div className="mx-2">{elem.number}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">User Email:</label>
+                        <div className="mx-2">{elem.email}</div>
+                      </div>
+                    </div>
+                    <div className="user_upper_details_div">
+                      <div className="user_details">
+                        <label htmlFor="">User Event Location:</label>
+                        <div className="mx-2">{elem.address}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">Event Setup Date:</label>
+                        <div className="mx-2">{elem.date}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">Event Setup Time:</label>
+                        <div className="mx-2">{elem.time}</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </>
+            );
+          })}
+     </>
+
       : event === "Birthday+Pool"
       ? <>
       {birthdayPoolArray.map((elem, index) => {

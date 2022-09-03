@@ -724,6 +724,18 @@ app.post('/api/dashboardphoto' , async (req, res) => {
       res.status(500).send("Internal Server Error");
   }
 })
+app.post('/api/dashboardcustom' , async (req, res) => {
+  try {
+      const details = await BeforeCustom.find({ email: req.body.useremailfordashbaord });
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+
+
 
 //  api Birthday+Pool for dashboard
 
@@ -826,6 +838,16 @@ app.post('/api/admindashboardparty' , async (req, res) => {
 app.post('/api/admindashboardmeeting' , async (req, res) => {
   try {
       const details = await Meeting.find();
+      res.json(details)
+  } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+  }
+})
+
+app.post('/api/admindashboardcustom' , async (req, res) => {
+  try {
+      const details = await BeforeCustom.find();
       res.json(details)
   } catch (error) {
       console.error(error.message);

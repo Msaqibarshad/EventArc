@@ -12,6 +12,8 @@ const Dashboard = () => {
   const [photoArray, setphotoArray] = useState([]);
   const [partyArray, setpartyArray] = useState([]);
   const [meetingArray, setmeetingArray] = useState([]);
+  const [customArray, setcustomArray] = useState([]);
+
   const [birthdayPoolArray, setbirthdayPoolArray] = useState([]);
   const [birthPhotoArray, setbirthPhotoArray] = useState([]);
   const [poolPhotoArray, setpoolPhotoArray] = useState([]);
@@ -165,6 +167,30 @@ const Dashboard = () => {
         console.log({ err });
         alert("Error while get data from API", err);
       });
+
+      // custom api calling
+      fetch("/api/dashboardcustom", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          if (res.error) {
+            alert(res.error);
+          } else {
+            console.log(res);
+            setcustomArray(res);
+          }
+        })
+        .catch((err) => {
+          console.log({ err });
+          alert("Error while get data from API", err);
+        });
+
 
     //Birthday + Pool api calling
 
@@ -421,6 +447,27 @@ const Dashboard = () => {
               <>
                 <div className="for_inner_order">
                   <div className="evnet_name">Meeting</div>
+                  <div className="event_date">
+                    <label htmlFor="">Event Date:</label>
+                    <div>{elem.date}</div>
+                  </div>
+                  <div className="event_location">
+                    <label htmlFor="">Event Location:</label>
+                    <div>{elem.address}</div>
+                  </div>
+
+                  <div className="delete_btn">
+                    <i class="fas fa-trash-alt "></i> Delete
+                  </div>
+                </div>
+              </>
+            );
+          })}
+           {customArray.map((elem, index) => {
+            return (
+              <>
+                <div className="for_inner_order">
+                  <div className="evnet_name">Custom</div>
                   <div className="event_date">
                     <label htmlFor="">Event Date:</label>
                     <div>{elem.date}</div>
