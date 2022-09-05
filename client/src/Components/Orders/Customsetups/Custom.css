@@ -1,40 +1,118 @@
-.main_for_custom_birthday{
-    background-image: url(./Images/back.png);
+
+.main_for_birthday_custom{
+    width: 100%;
+    height: 100vh;
+    display: flex;justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+.inner_div1_for_custom_birthday{
+width: 100%;
+height: 90vh;
+border: 5px solid green;
+
+}
+.inner_div2_for_custom_birthday{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.inner_child_for_custom_birthday1{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn_bg.png");
     background-size: cover;
-width: 800px;
-    height: 80vh;
+ cursor: pointer;
 }
-.lower_btns_for_custom_birthday{
-    height: 120px;
-    border: 2px solid var(--color1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.link_for_img{
-    margin-right: 10px;
+.inner_child_for_custom_birthday2{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn_curatain.png");
+    background-size: cover;
     cursor: pointer;
+
+}
+.inner_child_for_custom_birthday3{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn-ctable.png");
+    background-size: cover;
+    cursor: pointer;
+
+}
+.inner_child_for_custom_birthday4{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn_dinning.png");
+    background-size: cover;
+    cursor: pointer;
+
+}
+.inner_child_for_custom_birthday5{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn_cake.png");
+    background-size: cover;
+    cursor: pointer;
+
+}
+.inner_child_for_custom_birthday6{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn_balloon.png");
+    cursor: pointer;
+
+    background-size: cover;
+}
+.inner_child_for_custom_birthday7{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url("./Images/btn_spell.png");
+    background-size: cover;
+    cursor: pointer;
+margin-top: 10px;
+}
+
+.new_div{
     display: flex;
-    align-items: center;
-    text-align: center;
     justify-content: center;
-    width: 100px;
-    height: 80px;
-    border: 1px solid black;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid var(--color4);
+    border-radius: 10px ;
+    width: 180px;
+}
+.new_div label{
+    color: black;
+    margin-top: 5px;
 }
 
-.tabel_img{
-    position: absolute;
-    top: 380px;
-    width: 100px;
-    left: 380px;
-    display: none;
+.first_option1,.first_option2{
+    width: 70px;
+    height: 70px;
+    margin: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color4);
+    color: white;
+cursor: pointer;
 
 }
-.Curtain{
-    width: 550px;
-    position: absolute;
-    top: 170px;
-    left: 170px;
-    display: none;
+.options_table{
+    display: flex;
+
+
 }
+
+

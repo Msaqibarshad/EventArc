@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import logo from "./Images/logofornavbar.png";
+import logo from "./Images/ealogo.png";
 import { useState } from "react";
+
 
 const Header = () => {
   const [buttons, setButtons] = useState(false);
@@ -27,7 +28,8 @@ const Header = () => {
         <div class="container-fluid ">
           <a class="navbar-brand" href="#">
             {/* <img src={logo} alt="" /> */}
-            <span className="forarc">EVENT</span>ARC
+            {/* <span className="forarc">EVENT</span>ARC */}
+            <img src={logo} alt="" />
           </a>
           <button
             class="navbar-toggler"

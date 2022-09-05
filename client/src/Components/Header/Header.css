@@ -18,6 +18,11 @@
 }
 .forarc {
   color: #0075ff;
+  /* font-family: 'Great Vibes', cursive; */
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+.forarc span{
+  /* font-family: 'Great Vibes', cursive; */
 }
 .nav-link {
   /* width: 100px; */
@@ -128,3 +133,13 @@ padding: 20px 0px;
 
 }
 
+.navbar-brand{
+  /* font-family: 'Great Vibes', cursive; */
+  /* font-family: 'Sacramento', cursive; */
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+.navbar-brand img{
+  width: 100px;
+  height: 50px;
+}
