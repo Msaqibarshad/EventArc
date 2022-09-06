@@ -23,6 +23,8 @@ import BirthdayCustom from "./Components/Orders/Customsetups/BirthdayCustom";
 import AdminDashboard from "./Components/Dashboard/AdminDashboard";
 import Firstsignin_signup from "./Components/FirstSignup/Firstsignin_signup";
 import BeforeCustom from "./Components/Custom/BeforeCustom";
+import Profile from "./Components/User-profile/Profile";
+
 // import Parent from "./Components/LearnProps/Parent";
 function App() {
   return (
@@ -31,6 +33,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Navbar />
+          </Route>
+          <Route exact path="/profile">
+            <Profile/>
           </Route>
           <Route exact path="/firstinup">
             <Firstsignin_signup/>

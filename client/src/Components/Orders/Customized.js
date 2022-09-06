@@ -26,7 +26,7 @@ const Customized = () => {
 
 
 
-        <div className="child-div-4-customization">Wedding <img className="img-4-own" src={wedd} alt="" /></div>
+
         <div className="child-div-4-customization">Party <img className="img-4-own" src={party
         } alt="" /></div>
 

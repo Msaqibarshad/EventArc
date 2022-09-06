@@ -3,6 +3,8 @@ import { NavLink, useHistory } from "react-router-dom";
 import "./Customize.css";
 
 const BeforeCustom = () => {
+  // const history = history();
+
   const [name, setname] = useState("");
   const [number, setnumber] = useState("");
   const [email, setemail] = useState("");
@@ -47,6 +49,7 @@ const BeforeCustom = () => {
             alert(res.errors[0].msg);
           } else {
             alert(res.success);
+            history.push("/birthdaycustomize");
             clear();
             // history.push("/dashboard");
           }
@@ -137,14 +140,12 @@ const BeforeCustom = () => {
             />
           </NavLink>
           <input onClick={clear} className="btn_for_beforecustom" type="button" value="Clear" />
-          <NavLink exact to="/birthdaycustomize">
             <input
               className="btn_for_beforecustom"
               type="button"
               value="Next"
               onClick={handleClick}
             />
-          </NavLink>
         </div>
       </div>
     </div>

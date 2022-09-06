@@ -292,7 +292,10 @@ const Dashboard = () => {
     <div>
       <div className="top_navbar_for_user_dashboard">
         <div className="first_child">EVENTARC</div>
+        <NavLink className="anhcor_for_userdashboard" exact to ="/profile">
+
         <div className="first_child">{emailofuser}</div>
+        </NavLink>
       </div>
 
       <div className="lower_div_for_dashboard">

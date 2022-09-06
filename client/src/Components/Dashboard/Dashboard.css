@@ -166,3 +166,11 @@ display: none;
 a {
   text-decoration: none;
 }
+.anhcor_for_userdashboard{
+  text-decoration: none;
+  color: black;
+}
+.anhcor_for_userdashboard:hover{
+  color: black;
+
+}

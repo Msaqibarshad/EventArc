@@ -15,6 +15,7 @@
   /* width: 110%; */
   /* position: absolute; */
   /* position: ; */
+  padding: 0px;
 }
 .forarc {
   color: #0075ff;
@@ -63,11 +64,10 @@
   justify-content: center;
   align-items: center;
 }
-.modelcon{
+/* .modelcon{
 width: 1000px;
-/* height: ; */
 padding: 20px 0px;
-}
+} */
 .orderbtn{
   border: 2px solid var(--color4);
   box-shadow: none;
@@ -141,5 +141,5 @@ padding: 20px 0px;
 }
 .navbar-brand img{
   width: 100px;
-  height: 50px;
+  height: 70px;
 }
