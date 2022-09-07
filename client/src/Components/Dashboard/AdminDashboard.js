@@ -968,7 +968,7 @@ fetch("/api/admindashboardcustom", {
               <>
                 <div className="for_inner_order_admin">
                   <div className="first_inner_div_admin_dashboard_Order">
-                    <div className="evnet_name"> {index + 1} Custom Setup</div>
+                    <div className="evnet_name"> {index + 1} Custom Birthday Setup</div>
                   </div>
 
                   <div className="second_inner_div_admin_dashboard_Order">
@@ -999,7 +999,37 @@ fetch("/api/admindashboardcustom", {
                         <label htmlFor="">Event Setup Time:</label>
                         <div className="mx-2">{elem.time}</div>
                       </div>
-                    </div>
+                      </div>
+
+                      <div className="user_upper_details_div">
+
+                      <div className="user_details">
+                        <label htmlFor="">Curtain Value:</label>
+                        <div className="mx-2">{elem.curtainvalue}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">Cake Table Value:</label>
+                        <div className="mx-2">{elem.caketablevalue}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">Guest Table Time:</label>
+                        <div className="mx-2">{elem.dinntablevalue}</div>
+                      </div>
+                      </div>
+                      <div className="user_upper_details_div">
+
+                      <div className="user_details">
+                        <label htmlFor="">Cake Value:</label>
+                        <div className="mx-2">{elem.cakevalue}</div>
+                      </div>
+                      <div className="user_details">
+                        <label htmlFor="">Baloon Value:</label>
+                        <div className="mx-2">{elem.baloonvalue}</div>
+                      </div>
+                      </div>
+
+
+
 
                   </div>
                 </div>

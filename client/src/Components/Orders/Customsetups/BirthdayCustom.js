@@ -16,6 +16,12 @@ const BirthdayCustom = () => {
   const [dinntablevalue, setdinntablevalue] = useState("");
   const [cakevalue, setcakevalue] = useState("");
   const [baloonvalue, setbaloonvalue] = useState("");
+  const [name, setname] = useState("");
+  const [number, setnumber] = useState("");
+  const [email, setemail] = useState("");
+  const [address, setaddress] = useState("");
+  const [date, setdate] = useState("");
+  const [time, settime] = useState("");
 
   const [tbtn, settbtn] = useState(false);
   const [cbtn, setcbtn] = useState(false);
@@ -31,28 +37,34 @@ const BirthdayCustom = () => {
   const [guesttable2btn, setguesttable2btn] = useState(false);
   const [baloon, setbaloon] = useState(false);
 
-  const birthdaycustomsubmit = () =>{
+  const birthdaycustomsubmit = () => {
     if (
-
+      name === "" ||
+      number === "" ||
+      email === "" ||
+      address === "" ||
+      date === "" ||
+      time === "" ||
       curtainvalue === "" ||
-      caketablevalue=== "" ||
-dinntablevalue === "" ||
-cakevalue === "" ||
-baloonvalue === ""
-
-
+      caketablevalue === "" ||
+      dinntablevalue === "" ||
+      cakevalue === "" ||
+      baloonvalue === ""
     ) {
-
-      alert("Select all the fields to go ahead ")
-
+      alert("Select all the fields to go ahead ");
     } else {
       const data = {
+        name,
+        number,
+        email,
+        address,
+        date,
+        time,
         curtainvalue,
-caketablevalue,
-dinntablevalue,
-cakevalue,
-baloonvalue
-
+        caketablevalue,
+        dinntablevalue,
+        cakevalue,
+        baloonvalue,
       };
       fetch("/api/birthdaycustomizedsetup", {
         method: "POST",
@@ -76,9 +88,8 @@ baloonvalue
           console.log({ err });
           alert("Error while get data from API", err);
         });
-
     }
-  }
+  };
 
   // const [bgbtn, setbgbtn] = useState(false);
 
@@ -162,6 +173,45 @@ baloonvalue
 
   return (
     <div className="main_for_birthday_custom">
+      <div className="data_of_user_customizedbirthday_setup">
+        <h3 className="">Enter Your Personal Details</h3>
+        <div className="inputs_for_custom_birthday">
+          <input type="text" value={name} onChange={(e) =>{
+            setname(e.target.value)
+          }} placeholder="Enter Your Name" />
+          <input type="text" value={number} onChange={(e) =>{
+            setnumber(e.target.value)
+          }} placeholder="Enter Your Phone Number" />
+
+          <input type="text" value={address} onChange={(e) =>{
+            setaddress(e.target.value)
+          }} placeholder="Enter Your Setup Location" />
+        </div>
+        <div className="inputs_for_custom_birthday">
+          <input value={email} onChange={(e) =>{
+            setemail(e.target.value)
+          }} type="text" placeholder="Enter Your Email" />
+          <input value={date} onChange={(e) =>{
+            setdate(e.target.value)
+          }} type="date" />
+          <input value={time} onChange={(e) =>{
+            settime(e.target.value)
+          }} type="time" />
+        </div>
+        <div className="inputs_for_custom_birthday">
+          <input
+            className="btn_custmized_birthday"
+            type="button"
+            value="Clear"
+          />
+
+          <input
+            className="btn_custmized_birthday"
+            type="button"
+            value="Cancel"
+          />
+        </div>
+      </div>
       <div className="inner_div1_for_custom_birthday">
         <img src={bgimg} alt="" />
 
@@ -218,13 +268,9 @@ baloonvalue
         ) : (
           <></>
         )}
-
       </div>
 
-      <input type="button" value="Submit" onClick={birthdaycustomsubmit} className="custombirthdaysubmit"  />
       <div className="inner_div2_for_custom_birthday">
-
-
         <div className="new_div">
           {sbtn2 ? (
             <>
@@ -351,6 +397,12 @@ baloonvalue
           <label htmlFor="">Birthday Spelling</label>
         </div>
       </div>
+      <input
+        type="button"
+        value="Submit"
+        onClick={birthdaycustomsubmit}
+        className="custombirthdaysubmit"
+      />
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Customized = () => {
         </p>
         <Hr />
 
-        <NavLink exact to="/beforecustom">
+        <NavLink exact to="/birthdaycustomize">
         <div className="child-div-4-customization mt-3">Birthday
         <img className="img-4-own" src={cake} alt="" /></div>
         </NavLink>

@@ -35,6 +35,13 @@ app.post(
   async (req, res) => {
     console.log(req.body);
     const {
+
+      name,
+      number,
+      email,
+      address,
+      date,
+      time,
       curtainvalue,
       caketablevalue,
       dinntablevalue,
@@ -45,6 +52,14 @@ app.post(
 
 
     await customvaluemodal.create({
+
+       name:name,
+            number:number,
+            email:email,
+            address:address,
+            date:date,
+            time:time,
+
       curtainvalue:curtainvalue,
             caketablevalue:caketablevalue,
             dinntablevalue:dinntablevalue,
@@ -97,38 +112,7 @@ app.post(
     res.send({ success: "succcessfully enetered" });
   }
 );
-app.post(
-  "/api/beforecustom",
-  [body("email", "please enter a valid email address ").isEmail()],
-  async (req, res) => {
-    console.log(req.body);
-    const {
-      name,
-      number,
-      email,
-      address,
-      date,
-      time,
 
-    } = req.body;
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-
-    await BeforeCustom.create({
-      name: name,
-      number: number,
-      email: email,
-      address: address,
-      date: date,
-      time: time,
-
-    });
-
-    res.send({ success: "succcessfully enetered" });
-  }
-);
 app.post(
   "/api/pool",
   [body("email", "please enter a valid email address ").isEmail()],
@@ -753,7 +737,7 @@ app.post('/api/dashboardphoto' , async (req, res) => {
 })
 app.post('/api/dashboardcustom' , async (req, res) => {
   try {
-      const details = await BeforeCustom.find({ email: req.body.useremailfordashbaord });
+      const details = await customvaluemodal.find({ email: req.body.useremailfordashbaord });
       res.json(details)
   } catch (error) {
       console.error(error.message);
@@ -874,7 +858,7 @@ app.post('/api/admindashboardmeeting' , async (req, res) => {
 
 app.post('/api/admindashboardcustom' , async (req, res) => {
   try {
-      const details = await BeforeCustom.find();
+      const details = await customvaluemodal.find();
       res.json(details)
   } catch (error) {
       console.error(error.message);
@@ -1155,14 +1139,14 @@ app.delete(
   async (req, res) => {
     try {
       // Find the note to be delete and delete it
-      let beforecustom = await BeforeCustom.findById(req.params.id);
+      let beforecustom = await customvaluemodal.findById(req.params.id);
       if (!beforecustom) {
         return res
           .status(404)
           .json({ success: true, message: "B order not found" });
       }
 
-      beforecustom = await BeforeCustom.findByIdAndDelete(req.params.id);
+      beforecustom = await customvaluemodal.findByIdAndDelete(req.params.id);
       res.json({ Success: "B order  has been deleted"});
     } catch (error) {
       console.error(error.message);
