@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import Hr2 from '../Hr2/Hr2';
 import './Plan.css'
@@ -7,6 +7,16 @@ import './Plan.css'
 // import camera from './Images/photography.png';
 
 const Plan = () => {
+
+    const [buttons, setButtons] = useState(false);
+    useEffect(() => {
+      var auth = localStorage.getItem("auth-token");
+      if (auth !== null) {
+        setButtons(true);
+      } else {
+        setButtons(false);
+      }
+    }, []);
   return (
     <div>
 
@@ -31,10 +41,20 @@ const Plan = () => {
             <p>5 Zinger Burger</p>
             <p>2 2.15 Ltrs. Cool Drinks </p>
             <p>Decoration</p>
-            <NavLink exact to="/firstinup">
 
-            <a href="">Get An Offer <span>&#8594;</span></a>
-            </NavLink>
+            {
+                buttons ? <>
+
+                </>
+                :
+                <>
+                 <NavLink exact to="/firstinup">
+
+<a href="">Get An Offer <span>&#8594;</span></a>
+</NavLink>
+                </>
+            }
+
 
              </div>
                 </div>
@@ -55,10 +75,18 @@ const Plan = () => {
             <p>
                 Fully DJ Setup </p>
             <p>Parking Availability</p>
-            <NavLink exact to="/firstinup">
+            {
+                buttons ? <>
 
-            <a href="">Get An Offer <span>&#8594;</span></a>
-            </NavLink>
+                </>
+                :
+                <>
+                 <NavLink exact to="/firstinup">
+
+<a href="">Get An Offer <span>&#8594;</span></a>
+</NavLink>
+                </>
+            }
 
              </div>
                 </div>
@@ -78,10 +106,18 @@ const Plan = () => {
             <p>Edited Photos</p>
             <p>Snacks </p>
             <p>Cool Drinks</p>
-            <NavLink exact to="/firstinup">
+            {
+                buttons ? <>
 
-            <a href="">Get An Offer <span>&#8594;</span></a>
-            </NavLink>
+                </>
+                :
+                <>
+                 <NavLink exact to="/firstinup">
+
+<a href="">Get An Offer <span>&#8594;</span></a>
+</NavLink>
+                </>
+            }
 
              </div>
                 </div>

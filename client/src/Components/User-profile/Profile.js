@@ -7,6 +7,9 @@ import twitter from "../Team/Images/twitter.png"
 import { NavLink } from 'react-router-dom';
 
 const Profile = () => {
+  var useremailfordashbaord = localStorage.getItem("useremail");
+  var emailofuser = useremailfordashbaord.split("@")[0];
+
   return (
     <div className='main_for_profile'>
 <div className="inner_for_profile">
@@ -26,10 +29,10 @@ const Profile = () => {
     <img src={man} alt="" />
     </div>
     <div className='user_data'>
-    <h4>user name</h4>
-    <h6>user number</h6>
-    <h6>user number</h6>
-    <h6>user email</h6>
+    <h4>{emailofuser}</h4>
+    {/* <h6>user number</h6> */}
+    {/* <h6>user number</h6> */}
+    <h6>{useremailfordashbaord}</h6>
     </div>
 
 

@@ -19,6 +19,7 @@ const HybridFourth = require("./modals/hybridFourthModal");
 const Contact = require("./modals/contactModal");
 const usersignup = require("./modals/usersignupModal");
 const BeforeCustom = require("./modals/beforeCustom");
+const customvaluemodal = require("./modals/customizedsetupvalues")
 // const usersignin = require("./modals/userdigninModal");
 const cors = require("cors");
 app.use(cors());
@@ -28,6 +29,32 @@ const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
 var JWT_SECRET= "ewqeqeeqeqeqeeewe"
+
+app.post(
+  "/api/birthdaycustomizedsetup",
+  async (req, res) => {
+    console.log(req.body);
+    const {
+      curtainvalue,
+      caketablevalue,
+      dinntablevalue,
+      cakevalue,
+      baloonvalue
+
+    } = req.body;
+
+
+    await customvaluemodal.create({
+      curtainvalue:curtainvalue,
+            caketablevalue:caketablevalue,
+            dinntablevalue:dinntablevalue,
+            cakevalue:cakevalue,
+            baloonvalue:baloonvalue,
+    });
+
+    res.send({ success: "succcessfully enetered" });
+  }
+);
 app.post(
   "/api/birthday",
   [body("email", "please enter a valid email address ").isEmail()],
@@ -897,6 +924,252 @@ app.post('/api/admindashboardbirthdaypoolphoto' , async (req, res) => {
   }
 })
 
+//delete function api
+
+app.delete(
+  "/api/deletebirthday/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let birthday = await Birthday.findById(req.params.id);
+      if (!birthday) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      birthday = await Birthday.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletepool/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let pool = await Pool.findById(req.params.id);
+      if (!pool) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      pool = await Pool.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletewedding/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let wedding = await Wedding.findById(req.params.id);
+      if (!wedding) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      wedding = await Wedding.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletephoto/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let photo = await Photo.findById(req.params.id);
+      if (!photo) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      photo = await Photo.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+
+app.delete(
+  "/api/deleteparty/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let party = await Party.findById(req.params.id);
+      if (!party) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      party = await Party.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+
+app.delete(
+  "/api/deletemeeting/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let meeting = await Meeting.findById(req.params.id);
+      if (!meeting) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      meeting = await Meeting.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletebirthpool/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let birthpool = await HybridFirst.findById(req.params.id);
+      if (!birthpool) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      birthpool = await HybridFirst.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+
+app.delete(
+  "/api/deletebirthphoto/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let birthphoto = await HybridSecond.findById(req.params.id);
+      if (!birthphoto) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      birthphoto = await HybridFirst.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletepoolphoto/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let poolphoto = await HybridThird.findById(req.params.id);
+      if (!poolphoto) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      poolphoto = await HybridThird.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletebirthpoolphoto/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let birthpoolphoto = await HybridFourth.findById(req.params.id);
+      if (!birthpoolphoto) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      birthpoolphoto = await HybridFourth.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+app.delete(
+  "/api/deletebeforecustom/:id",
+
+  async (req, res) => {
+    try {
+      // Find the note to be delete and delete it
+      let beforecustom = await BeforeCustom.findById(req.params.id);
+      if (!beforecustom) {
+        return res
+          .status(404)
+          .json({ success: true, message: "B order not found" });
+      }
+
+      beforecustom = await BeforeCustom.findByIdAndDelete(req.params.id);
+      res.json({ Success: "B order  has been deleted"});
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+);
 
 
 

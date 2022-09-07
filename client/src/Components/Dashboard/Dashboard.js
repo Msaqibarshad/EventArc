@@ -6,6 +6,8 @@ const Dashboard = () => {
   var nameofuser = localStorage.getItem("name");
   var nameofuser1 = localStorage.getItem("name1");
 
+  const [updownbtn, setupdownbtn] = useState(true);
+
   const [birthdayArray, setBirthdayArray] = useState([]);
   const [poolArray, setpoolArray] = useState([]);
   const [weedingArray, setweedingArray] = useState([]);
@@ -18,6 +20,19 @@ const Dashboard = () => {
   const [birthPhotoArray, setbirthPhotoArray] = useState([]);
   const [poolPhotoArray, setpoolPhotoArray] = useState([]);
   const [birthdayPoolPhotoArray, setbirthdayPoolPhotoArray] = useState([]);
+  const [event, setevent] = useState("Birthday");
+
+
+  const forup = () => {
+    setupdownbtn(true);
+    document.getElementById("dropforadmin").style.display = "none";
+  };
+  const fordown = () => {
+    setupdownbtn(false);
+    document.getElementById("dropforadmin").style.display = "block";
+  };
+
+
   useEffect(() => {
     var useremailfordashbaord = localStorage.getItem("useremail");
      emailofuser = useremailfordashbaord.split("@")[0];
@@ -51,6 +66,8 @@ const Dashboard = () => {
         alert("Error while get data from API", err);
       });
       console.log({check: birthdayArray});
+
+
 
     // pool api calling
     fetch("/api/dashboardpool", {
@@ -288,6 +305,327 @@ const Dashboard = () => {
         alert("Error while get data from API", err);
       });
   }, []);
+
+  const deletefunc = (id) =>{
+console.log({id});
+    fetch(`/api/deletebirthday/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        if (res.error) {
+          alert(res.error);
+        } else {
+          console.log(res);
+          // setTimeout(() => {
+            window.location.reload();
+
+          //   }, 500);
+          //  window.location.reload();
+
+        }
+      })
+      .catch((err) => {
+        console.log({ err });
+        alert("Error while get data from API", err);
+      });
+  }
+
+
+  const deletefunc1 = (id) =>{
+    console.log({id});
+        fetch(`/api/deletepool/${id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          }
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+            if (res.error) {
+              alert(res.error);
+            } else {
+              console.log(res);
+              // setTimeout(() => {
+                window.location.reload();
+
+              //   }, 500);
+              //  window.location.reload();
+
+            }
+          })
+          .catch((err) => {
+            console.log({ err });
+            alert("Error while get data from API", err);
+          });
+      }
+
+      const deletefunc2 = (id) =>{
+        console.log({id});
+            fetch(`/api/deletewedding/${id}`, {
+              method: "DELETE",
+              headers: {
+                "Content-Type": "application/json",
+              }
+            })
+              .then((res) => res.json())
+              .then((res) => {
+                console.log(res);
+                if (res.error) {
+                  alert(res.error);
+                } else {
+                  console.log(res);
+                  // setTimeout(() => {
+                    window.location.reload();
+
+                  //   }, 500);
+                  //  window.location.reload();
+
+                }
+              })
+              .catch((err) => {
+                console.log({ err });
+                alert("Error while get data from API", err);
+              });
+          }
+
+
+          const deletefunc3 = (id) =>{
+console.log({id});
+    fetch(`/api/deletephoto/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        if (res.error) {
+          alert(res.error);
+        } else {
+          console.log(res);
+          // setTimeout(() => {
+            window.location.reload();
+
+          //   }, 500);
+          //  window.location.reload();
+
+        }
+      })
+      .catch((err) => {
+        console.log({ err });
+        alert("Error while get data from API", err);
+      });
+  }
+
+  const deletefunc4 = (id) =>{
+    console.log({id});
+        fetch(`/api/deleteparty/${id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          }
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+            if (res.error) {
+              alert(res.error);
+            } else {
+              console.log(res);
+              // setTimeout(() => {
+                window.location.reload();
+
+              //   }, 500);
+              //  window.location.reload();
+
+            }
+          })
+          .catch((err) => {
+            console.log({ err });
+            alert("Error while get data from API", err);
+          });
+      }
+
+      const deletefunc5 = (id) =>{
+        console.log({id});
+            fetch(`/api/deletemeeting/${id}`, {
+              method: "DELETE",
+              headers: {
+                "Content-Type": "application/json",
+              }
+            })
+              .then((res) => res.json())
+              .then((res) => {
+                console.log(res);
+                if (res.error) {
+                  alert(res.error);
+                } else {
+                  console.log(res);
+                  // setTimeout(() => {
+                    window.location.reload();
+
+                  //   }, 500);
+                  //  window.location.reload();
+
+                }
+              })
+              .catch((err) => {
+                console.log({ err });
+                alert("Error while get data from API", err);
+              });
+          }
+
+          const deletefunc6 = (id) =>{
+            console.log({id});
+                fetch(`/api/deletebeforecustom/${id}`, {
+                  method: "DELETE",
+                  headers: {
+                    "Content-Type": "application/json",
+                  }
+                })
+                  .then((res) => res.json())
+                  .then((res) => {
+                    console.log(res);
+                    if (res.error) {
+                      alert(res.error);
+                    } else {
+                      console.log(res);
+                      // setTimeout(() => {
+                        window.location.reload();
+
+                      //   }, 500);
+                      //  window.location.reload();
+
+                    }
+                  })
+                  .catch((err) => {
+                    console.log({ err });
+                    alert("Error while get data from API", err);
+                  });
+              }
+
+              const deletefunc7 = (id) =>{
+                console.log({id});
+                    fetch(`/api/deletebirthpool/${id}`, {
+                      method: "DELETE",
+                      headers: {
+                        "Content-Type": "application/json",
+                      }
+                    })
+                      .then((res) => res.json())
+                      .then((res) => {
+                        console.log(res);
+                        if (res.error) {
+                          alert(res.error);
+                        } else {
+                          console.log(res);
+                          // setTimeout(() => {
+                            window.location.reload();
+
+                          //   }, 500);
+                          //  window.location.reload();
+
+                        }
+                      })
+                      .catch((err) => {
+                        console.log({ err });
+                        alert("Error while get data from API", err);
+                      });
+                  }
+
+                  const deletefunc8 = (id) =>{
+                    console.log({id});
+                        fetch(`/api/deletebirthphoto/${id}`, {
+                          method: "DELETE",
+                          headers: {
+                            "Content-Type": "application/json",
+                          }
+                        })
+                          .then((res) => res.json())
+                          .then((res) => {
+                            console.log(res);
+                            if (res.error) {
+                              alert(res.error);
+                            } else {
+                              console.log(res);
+                              // setTimeout(() => {
+                                window.location.reload();
+
+                              //   }, 500);
+                              //  window.location.reload();
+
+                            }
+                          })
+                          .catch((err) => {
+                            console.log({ err });
+                            alert("Error while get data from API", err);
+                          });
+                      }
+
+                      const deletefunc9 = (id) =>{
+                        console.log({id});
+                            fetch(`/api/deletepoolphoto/${id}`, {
+                              method: "DELETE",
+                              headers: {
+                                "Content-Type": "application/json",
+                              }
+                            })
+                              .then((res) => res.json())
+                              .then((res) => {
+                                console.log(res);
+                                if (res.error) {
+                                  alert(res.error);
+                                } else {
+                                  console.log(res);
+                                  // setTimeout(() => {
+                                    window.location.reload();
+
+                                  //   }, 500);
+                                  //  window.location.reload();
+
+                                }
+                              })
+                              .catch((err) => {
+                                console.log({ err });
+                                alert("Error while get data from API", err);
+                              });
+                          }
+                          const deletefunc10 = (id) =>{
+                            console.log({id});
+                                fetch(`/api/deletebirthpoolphoto/${id}`, {
+                                  method: "DELETE",
+                                  headers: {
+                                    "Content-Type": "application/json",
+                                  }
+                                })
+                                  .then((res) => res.json())
+                                  .then((res) => {
+                                    console.log(res);
+                                    if (res.error) {
+                                      alert(res.error);
+                                    } else {
+                                      console.log(res);
+                                      // setTimeout(() => {
+                                        window.location.reload();
+
+                                      //   }, 500);
+                                      //  window.location.reload();
+
+                                    }
+                                  })
+                                  .catch((err) => {
+                                    console.log({ err });
+                                    alert("Error while get data from API", err);
+                                  });
+                              }
+
   return (
     <div>
       <div className="top_navbar_for_user_dashboard">
@@ -304,9 +642,106 @@ const Dashboard = () => {
             <i class="fas fa-house-user "></i>{" "}
             <div className="text_for_data">Dashboard</div>
           </div>
-          <div className="inner_data">
+          <div className="inner_data d-flex justify-content-between">
             <i class="fas fa-list-ul "></i>{" "}
             <div className="text_for_data">My Orders</div>
+{updownbtn ? (
+              <i class="fas fa-chevron-down " onClick={fordown}></i>
+            ) : (
+              <i class="fas fa-chevron-up" onClick={forup}></i>
+            )}
+          </div>
+
+          <div className="all_order_inner_dropdown" id="dropforadmin">
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Birthday");
+              }}
+            >
+              <div>Birthday </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Pool");
+              }}
+            >
+              <div>Pool </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Wedding");
+              }}
+            >
+              <div>Wedding </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Photo");
+              }}
+            >
+              <div>Photo </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Party");
+              }}
+            >
+              <div>Party </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Meeting");
+              }}
+            >
+              <div>Meeting </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Custom");
+              }}
+            >
+              <div>Custom </div>
+            </div>
+
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Birthday+Pool");
+              }}
+            >
+              <div>Birth+Pool </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Birthday+Photo");
+              }}
+            >
+              <div>Birth+Photo </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Pool+Photo");
+              }}
+            >
+              <div>Pool+Photo </div>
+            </div>
+            <div
+              className="inner_data2"
+              onClick={() => {
+                setevent("Birthday+Pool+Photo");
+              }}
+            >
+              <div>Birth+Pool+Photo </div>
+            </div>
           </div>
           <div className="inner_data">
             <i class="fas fa-star"></i>{" "}
@@ -337,7 +772,13 @@ const Dashboard = () => {
         </div>
 
         <div className="rightdiv_lower_dashboard container">
-          {birthdayArray.map((elem, index) => {
+
+          {
+
+    event === "Birthday" ?
+
+    <>
+    {birthdayArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -351,7 +792,9 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
@@ -359,7 +802,9 @@ const Dashboard = () => {
             );
           })}
 
-          {poolArray.map((elem, index) => {
+    </> : event === "Pool" ?
+    <>
+    {poolArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -373,7 +818,9 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc1(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
@@ -381,7 +828,11 @@ const Dashboard = () => {
             );
           })}
 
-          {weedingArray.map((elem, index) => {
+    </>
+      : event === "Wedding"
+?
+<>
+{weedingArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -395,14 +846,19 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc2(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
-          {photoArray.map((elem, index) => {
+</>
+      : event === "Photo"
+? <>
+{photoArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -416,14 +872,20 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc3(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
-          {partyArray.map((elem, index) => {
+</>
+      : event === "Party"
+?
+<>
+{partyArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -437,15 +899,19 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc4(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
-
-          {meetingArray.map((elem, index) => {
+</>
+      : event === "Meeting"
+? <>
+{meetingArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -459,14 +925,19 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc5(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
-           {customArray.map((elem, index) => {
+</>
+: event === "Custom" ?
+<>
+{customArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -480,15 +951,19 @@ const Dashboard = () => {
                     <div>{elem.address}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc6(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
-
-          {birthdayPoolArray.map((elem, index) => {
+</>
+: event === "Birthday+Pool"
+? <>
+{birthdayPoolArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -502,15 +977,20 @@ const Dashboard = () => {
                     <div>{elem.personaddress}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc7(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
+</>
 
-          {birthPhotoArray.map((elem, index) => {
+: event === "Birthday+Photo"
+      ? <>
+      {birthPhotoArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -524,15 +1004,20 @@ const Dashboard = () => {
                     <div>{elem.personaddress}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc8(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
+      </>
 
-          {poolPhotoArray.map((elem, index) => {
+: event === "Pool+Photo"
+? <>
+{poolPhotoArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -546,14 +1031,19 @@ const Dashboard = () => {
                     <div>{elem.personaddress}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc9(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
-          {birthdayPoolPhotoArray.map((elem, index) => {
+</>
+: event === "Birthday+Pool+Photo" ?
+<>
+{birthdayPoolPhotoArray.map((elem, index) => {
             return (
               <>
                 <div className="for_inner_order">
@@ -567,13 +1057,39 @@ const Dashboard = () => {
                     <div>{elem.personaddress}</div>
                   </div>
 
-                  <div className="delete_btn">
+                  <div className="delete_btn" onClick={()=>{
+                    deletefunc10(elem._id)
+                  }}>
                     <i class="fas fa-trash-alt "></i> Delete
                   </div>
                 </div>
               </>
             );
           })}
+</>
+
+: <>
+</>
+
+
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           {/* <div className="for_inner_order">
             <div className="evnet_name">Name Of Event</div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 
 import "./Services.css";
 import cake from "./Images/New Images/birthday.png";
@@ -14,6 +14,17 @@ import Hr from "../Hr/Hr";
 import { NavLink } from "react-router-dom";
 
 const Services = () => {
+  const [buttons, setButtons] = useState(false);
+  useEffect(() => {
+    var auth = localStorage.getItem("auth-token");
+    if (auth !== null) {
+      setButtons(true);
+    } else {
+      setButtons(false);
+    }
+  }, []);
+
+
   return (
     <div>
       <div className="main4services text-center py-5" id="services">
@@ -29,10 +40,19 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={cake} alt="" />
   <h5 className="my-3">BIRTHDAYS</h5>
+  {
+    buttons ? <>
 
-  <NavLink exact to="/firstinup">
+    </>
+    :
+    <>
+    <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
+
+
 
 </div>
             </div>
@@ -40,9 +60,17 @@ const Services = () => {
             <div className="inner4services">
             <img className="img4services" src={photoshoot} alt="" />
   <h5 className="my-3">PHOTOGRAPHY</h5>
-  <NavLink exact to="/firstinup">
+  {
+    buttons ? <>
+
+    </>
+    :
+    <>
+     <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
 
 </div>
             </div>
@@ -50,9 +78,17 @@ const Services = () => {
             <div className="inner4services">
   <img className="img4services" src={wedding} alt="" />
   <h5 className="my-3">WEDDING SETUP</h5>
-  <NavLink exact to="/firstinup">
+  {
+    buttons ? <>
+
+    </>
+    :
+    <>
+    <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
 
 </div>
             </div>
@@ -60,9 +96,17 @@ const Services = () => {
             <div className="inner4services">
             <img className="img4services" src={meeting} alt="" />
   <h5 className="my-3">METTINGS</h5>
-  <NavLink exact to="/firstinup">
+  {
+    buttons ? <>
+
+    </>
+    :
+    <>
+    <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
 
 </div>
             </div></div>
@@ -71,9 +115,17 @@ const Services = () => {
             <div className="inner4services">
             <img className="img4services" src={pool} alt="" />
 <h5 className="my-3">POOL PARTIES</h5>
-  <NavLink exact to="/firstinup">
+{
+    buttons ? <>
+
+    </>
+    :
+    <>
+    <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
 
 </div>
 </div>
@@ -81,9 +133,17 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={party} alt="" />
 <h5 className="my-3">PARTIES</h5>
-  <NavLink exact to="/firstinup">
+{
+    buttons ? <>
+
+    </>
+    :
+    <>
+    <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
 
 </div>
 </div>
@@ -91,9 +151,18 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={hybrid} alt="" />
 <h5 className="my-3">HYBRID SETUP</h5>
-  <NavLink exact to="/firstinup">
+{
+    buttons ? <>
+
+    </>
+    :
+    <>
+
+<NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+    </>
+  }
 
 </div>
 </div>
@@ -101,9 +170,18 @@ const Services = () => {
 <div className="inner4services">
 <img className="img4services" src={custom} alt="" />
 <h5 className="my-3">CUSTOMIZED SETUP</h5>
-  <NavLink exact to="/firstinup">
+{
+    buttons ? <>
+
+    </>
+    :
+    <>
+    <NavLink exact to="/firstinup">
   <a className="text-center" href="">Order To Us <span>&#8594;</span> </a>
   </NavLink>
+
+    </>
+  }
 
 </div>
 </div>
